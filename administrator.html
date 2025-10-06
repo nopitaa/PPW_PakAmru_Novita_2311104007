@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Admin</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    #header {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    #main {
+        display: flex;
+        flex: 1;
+    }
+    #menu {
+        width: 20%;
+        background: #34495e;
+        color: white;
+        padding: 15px;
+    }
+    #menu a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 8px;
+        margin: 5px 0;
+        background: #3d566e;
+        border-radius: 4px;
+    }
+    #menu a:hover {
+        background: #1abc9c;
+    }
+    #content {
+        flex: 1;
+        padding: 20px;
+        background: #ecf0f1;
+    }
+    #footer {
+        background: #2c3e50;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+</style>
+</head>
+<body>
+    <div id="header">
+        <h2>Halaman Administrator</h2>
+    </div>
+
+    <div id="main">
+        <div id="menu">
+            <h3>Menu</h3>
+            <a href="#">Data User</a>
+            <a href="#">Kelola Produk</a>
+            <a href="#">Edit Password Admin</a>
+            <a href="#">Logout</a>
+        </div>
+
+        <div id="content">
+            <h3>Selamat Datang, Admin</h3>
+            <p>Pilih menu di sebelah kiri untuk mengelola sistem.</p>
+        </div>
+    </div>
+
+    <div id="footer">
+        footer
+    </div>
+</body>
+</html>
