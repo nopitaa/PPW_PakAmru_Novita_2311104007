@@ -1,108 +1,236 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NopiShop</title>
+    <title>Batik Nusantara</title>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        /* HEADER */
         #header {
-            float:left;
-            width:100%;
-            background: #1B3C53;
-            height: 100px;
-            text-align: center;
+            background: #a31c8d;
             color: white;
+            padding: 15px;
         }
 
+        #header h1 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        /* MENU */
         #menu {
-            float:left;
-            width:100%;
-            background: #456882;
-            height: 50px;
-            text-align: center;
-            color: white;
+            background: white;
+            text-align: right;
+            padding: 10px;
         }
 
-        #l-side {
-            float:left;
-            width:20%;
-            background: #234C6A;
-            height: 400px;
-            text-align: center;
-            color: white;
+        #menu a {
+            color: #a31c8d;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
         }
 
+        #menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* BANNER */
+        #banner {
+            position: relative;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        #banner img {
+            width: 95%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        #banner h2 {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255,255,255,0.8);
+            padding: 10px 25px;
+            border-radius: 10px;
+            color: #a31c8d;
+            font-size: 36px;
+        }
+
+        /* MAIN CONTENT */
+        #main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* PRODUK */
         #content {
-            float:left;
-            width:60%;
-            background: #E6D8C3;
-            height: 400px;
-            text-align: center;
-            color: white;
+            width: 70%;
         }
 
+        #content h3 {
+            color: #b30086;
+            margin-bottom: 15px;
+        }
+
+        .grid-produk {
+            display: grid;
+            grid-template-columns: repeat(3, 5fr);
+            gap: 15px;
+        }
+        /* Settingan card */
+        .card {
+            background: white;
+            border-radius: 8px;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+
+        .card h4 {
+            font-size: 16px;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .card p {
+            color: #b30086;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        /* REKOMENDASI */
         #r-side {
-            float:left;
-            width:20%;
-            background: #234C6A;
-            height: 400px;
-            text-align: center;
-            color: white;
+            width: 25%;
+        }
+        #r-side h3 {
+            color: #b30086;
+        }
+        .card img {
+            width: 100%;
+            height: auto;          
+            object-fit: contain;  
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        #r-side .harga {
+            color: red;
+            font-weight: bold;
         }
 
+        /* FOOTER dengan jarak antar elemen dan tepi kiri-kanan sama besar. */
         #footer {
-            float:left;
-            width:100%;
-            background: #1B3C53;
-            height: 100px;
-            text-align: center;
+            background: #a31c8d;
             color: white;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        #footer h4 {
+            margin-bottom: 10px;
+        }
+        #footer p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
-    <div id="header">header</div>
+    <div id="header">
+        <h1>Toko Online</h1>
+    </div>
 
     <div id="menu">
-        <a href="index.html">Beranda</a> |
-        <a href="produk.html">Product</a> |
-        <a href="member.html">member</a> |
-        <a href="registrasi.html">registrasi</a>
+        <a href="index.html">Beranda</a> 
+        <a href="produk.html">Product</a> 
+        <a href="member.html">Member</a> 
+        <a href="registrasi.html">Login</a>
     </div>
-    
-    <div id="l-side">popular</div>
 
-    <div id="content">
-        <h3 style="color:black; margin:20px 0;">Daftar Produk</h3>
-        
-        <div style="display:flex; justify-content:space-around; gap:20px; padding:20px;">
-            
-            <!-- Produk 1 -->
-            <div style="background:white; width:45%; padding:15px; border-radius:10px; text-align:center; color:black;">
-                <img src="assets/image/cireng.jpg" alt="Produk A" style="width:100%; max-width:120px; height:auto; margin:auto; border-radius:10px;">
-                <h4 style="margin:10px 0;">Cireng</h4>
-                <p>Cireng berkualitas renyah, enak buat cemilan .</p>
-                <p style="font-weight:bold; color:#234C6A;">Rp 50.000</p>
-                <button style="padding:10px 15px; background:#234C6A; color:white; border:none; border-radius:5px; ">
-                    Beli Sekarang
-                </button>
+    <div id="banner">
+        <img src="assets/image/batik.jpg" alt="Banner Batik">
+    </div>
+
+    <div id="main">
+        <div id="content">
+            <h3>Produk Terbaru</h3>
+            <div class="grid-produk">
+                <div class="card">
+                    <img src="assets/image/cowo.jpg" alt="Produk 1">
+                    <h4>Batik  Motif A</h4>
+                    <p>Rp 72.000</p>
+                </div>
+                <div class="card">
+                    <img src="assets/image/cowo 2.jpg" alt="Produk 2">
+                    <h4>Batik  Motif B</h4>
+                    <p>Rp 71.000</p>
+                </div>
+                <div class="card">
+                    <img src="assets/image/cowo 3.jpg" alt="Produk 3">
+                    <h4>Batik  Motif C</h4>
+                    <p>Rp 82.000</p>
+                </div>
+                <div class="card">
+                    <img src="assets/image/cowo 4.jpg" alt="Produk 4">
+                    <h4>Batik  Motif D</h4>
+                    <p>Rp 70.000</p>
+                </div>
+                <div class="card">
+                    <img src="assets/image/cowo 5.jpeg" alt="Produk 5">
+                    <h4>Batik  Motif E</h4>
+                    <p>Rp 74.000</p>
+                </div>
+                <div class="card">
+                    <img src="assets/image/cowo 6.jpg" alt="Produk 6">
+                    <h4>Batik  Motif F</h4>
+                    <p>Rp 71.000</p>
+                </div>
             </div>
+        </div>
 
-            <!-- Produk 2 -->
-            <div style="background:white; width:45%; padding:15px; border-radius:10px; text-align:center; color:black;">
-                <img src="assets/image/escampur.jpg" alt="Produk B" style="width:100%; max-width:120px; height:auto; margin:auto; border-radius:10px;">
-                <h4 style="margin:10px 0;">Es Campur</h4>
-                <p>Es Campur segar nikmat saat cuaca panas.</p>
-                <p style="font-weight:bold; color:#234C6A;">Rp 75.000</p>
-                <button style="padding:10px 15px; background:#234C6A; color:white; border:none; border-radius:5px;">
-                    Beli Sekarang
-                </button>
+        <div id="r-side">
+            <h3>Rekomendasi</h3>
+            <div class="card">
+                <img src="assets/image/rekomendasi.jpg" alt="Baju Batik Coklat">
+                <p>Baju Batik Coklat</p>
+                <p class="harga">Rp369.000,00</p>
             </div>
-
         </div>
     </div>
 
-    <div id="r-side">advertise</div> 
-    <div id="footer">footer</div>
+    <div id="footer">
+        <div>
+            <h4>QUESTIONS</h4>
+            <p>How to Buy</p>
+        </div>
+        <div>
+            <h4>CATEGORIES</h4>
+            <p>Batik Lengan Panjang</p>
+            <p>Batik Lengan Pendek</p>
+        </div>
+        <div>
+            <h4>FOLLOW US</h4>
+            <p>Facebook</p>
+            <p>Instagram</p>
+        </div>
+    </div>
 </body>
 </html>
